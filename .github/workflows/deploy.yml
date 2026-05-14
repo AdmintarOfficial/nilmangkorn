@@ -28,5 +28,4 @@ jobs:
 
             echo "Pull nilmangkorn code"
             cd /var/www/nilmangkorn
-            git fetch origin
-            git reset --hard origin/main
+            git pull
