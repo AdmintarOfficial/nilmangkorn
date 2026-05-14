@@ -27,5 +27,5 @@ jobs:
             set -e
 
             echo "Pull nilmangkorn code"
-            cd /var/www/nilmangkorn
+            cd /var/www/nilmangkorn || exit 1
             git pull
