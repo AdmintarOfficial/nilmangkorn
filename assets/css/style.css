@@ -998,6 +998,63 @@ h1, h2, h3, h4, h5, h6 {
 
 .mock-body { display: flex; flex-direction: column; gap: 6px; }
 .mock-navbar { height: 20px; border-radius: 4px; }
+
+/* ---------- Responsive adjustments (mobile & tablet) ---------- */
+@media (max-width: 1024px) {
+  .container { padding: 0 20px; }
+  .section-header h2 { font-size: 2rem; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  :root { --nav-h: 64px; }
+  .container { padding: 0 16px; }
+  .logo-text .logo-en { display: none; }
+  .logo-th { font-size: 1.1rem; }
+  .nav-links { display: none; }
+  .btn-nav-cta { display: none; }
+  .hamburger { display: flex; margin-left: auto; }
+  .nav-inner { gap: 12px; align-items: center; }
+  .hero-content { padding-top: 40px; padding-bottom: 80px; text-align: left; }
+  #hero h1 { text-align: left; }
+  .hero-actions { justify-content: flex-start; }
+  .hero-stats { padding: 16px; flex-direction: column; gap: 12px; max-width: none; }
+  .hero-stat-divider { display: none; }
+  .services-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .features-posters-grid { grid-template-columns: 1fr; gap: 16px; }
+  .offer-card { grid-template-columns: 1fr; padding: 24px; gap: 24px; }
+  .promo-highlight-inner { display: flex; flex-direction: column; gap: 20px; }
+  .promo-poster-wrap { max-width: 100%; }
+  .mobile-menu { padding: 16px; top: var(--nav-h); }
+  .trusted-logos { justify-content: center; gap: 8px; }
+  .btn { padding: 10px 16px; }
+  .btn-lg { padding: 12px 22px; font-size: 0.95rem; }
+  .service-card { padding: 20px; }
+  .stat-block { padding: 20px; }
+  .hero-sub { text-align: left; margin: 0 0 24px 0; }
+}
+
+@media (max-width: 480px) {
+  html { font-size: 15px; }
+  .logo-icon { width: 36px; height: 36px; }
+  .logo-th { font-size: 1rem; }
+  .section-header h2 { font-size: 1.6rem; }
+  .btn { padding: 10px 12px; font-size: 0.95rem; }
+  #hero h1 { font-size: clamp(1.6rem, 7vw, 2rem); }
+  .container { padding: 0 12px; }
+  .hero-badge { padding: 6px 14px; font-size: 0.85rem; }
+  .hero-actions { gap: 10px; }
+  .hero-stats { padding: 12px; }
+  .nav-inner { padding: 0 8px; gap: 8px; }
+}
+
+/* Ensure images and iframes are responsive everywhere */
+img, iframe, video { max-width: 100%; height: auto; }
+
 .mock-hero-img { height: 80px; border-radius: 4px; }
 .mock-content-row {
   display: grid;
